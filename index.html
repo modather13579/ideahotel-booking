@@ -36,7 +36,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -45,9 +45,9 @@
         .hero-section {
             background: var(--gradient-bg);
             color: white;
-            padding: 4rem 0;
+            padding: 3rem 0;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         .hotel-brand {
@@ -56,8 +56,8 @@
         }
 
         .hotel-logo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
@@ -69,22 +69,22 @@
         }
 
         .hotel-logo i {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--accent-color);
         }
 
-        /* Payment Section */
-        .bank-transfer-card {
+        /* Booking Card */
+        .booking-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 2.5rem;
-            margin: 2rem 0;
+            padding: 2rem;
+            margin: 1.5rem 0;
             box-shadow: var(--shadow-md);
             position: relative;
             overflow: hidden;
         }
 
-        .bank-transfer-card::before {
+        .booking-card::before {
             content: "";
             position: absolute;
             top: 0;
@@ -94,28 +94,46 @@
             background: var(--accent-color);
         }
 
-        .iban-display {
-            background: var(--light);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-            direction: ltr;
+        .booking-header {
             text-align: center;
-            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
         }
 
-        .iban-number {
-            font-family: 'Courier New', monospace;
-            font-size: 1.4rem;
-            letter-spacing: 2px;
+        .booking-header h2 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Guest Info */
+        .guest-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .info-value {
+            font-weight: 600;
             color: var(--dark);
-            margin: 1rem 0;
         }
 
         /* Action Buttons */
         .action-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             padding: 1rem 2rem;
             border-radius: 50px;
@@ -124,102 +142,86 @@
             text-decoration: none;
             position: relative;
             overflow: hidden;
-        }
-
-        .whatsapp-btn {
-            background: var(--success-color);
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            width: 100%;
+            margin: 1rem 0;
         }
 
         .map-btn {
             background: var(--accent-color);
             color: white;
+            box-shadow: 0 4px 15px rgba(255, 127, 80, 0.3);
         }
 
-        .copy-btn {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.8rem 1.5rem;
+        .map-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 127, 80, 0.4);
         }
 
         /* Booking Details */
         .details-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
 
         .detail-card {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
-            border-left: 4px solid var(--secondary-color);
+            border-right: 4px solid var(--secondary-color);
             transition: var(--transition);
         }
 
         .detail-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-md);
+        }
+
+        .detail-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
         }
 
         /* Price Breakdown */
         .price-timeline {
             background: white;
             border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
             position: relative;
         }
 
         .timeline-item {
             display: flex;
             justify-content: space-between;
-            padding: 1.2rem 0;
+            padding: 0.8rem 0;
             border-bottom: 1px dashed #eee;
         }
 
         .total-price {
             color: var(--accent-color);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
         }
 
-        /* Payment Conditions */
-        .conditions-card {
-            background: #FFF9F2;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 3rem 0;
-            border: 2px solid var(--accent-color);
-        }
-
-        .condition-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.8rem 1.2rem;
-            border-radius: 30px;
-            background: rgba(255, 127, 80, 0.1);
-            color: var (--accent-color);
-            margin: 1rem 0;
+        .highlight-red {
+            color: var(--accent-color);
+            font-weight: 600;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-section {
-                padding: 3rem 0;
+            .container {
+                padding: 0 16px;
             }
-
-            .iban-number {
-                font-size: 1.1rem;
-            }
-
-            .action-btn {
-                width: 100%;
-                justify-content: center;
+            
+            .guest-info {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -227,19 +229,6 @@
             0% { transform: scale(0.98); }
             50% { transform: scale(1.02); }
             100% { transform: scale(0.98); }
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            display: none;
-            backdrop-filter: blur(5px);
         }
     </style>
 </head>
@@ -257,50 +246,59 @@
     </header>
 
     <div class="container">
-        <!-- تحويل بنكي -->
-        <section class="bank-transfer-card">
-            <h2><i class="fas fa-university"></i> التحويل البنكي</h2>
-            <div class="iban-display">
-                <p>بنك الأهلي السعودي</p>
-                <div class="iban-number">SA32 3010 0949 0000 0653 4485</div>
-                <button class="action-btn copy-btn" onclick="copyAccountNumber()">
-                    <i class="far fa-copy"></i>
-                    نسخ رقم الحساب
-                </button>
+        <!-- بطاقة الحجز -->
+        <section class="booking-card">
+            <div class="booking-header">
+                <h2>بيانات المستأجر</h2>
+                <p>تم تأكيد حجزك بنجاح</p>
             </div>
 
-            <div class="text-center">
-                <input type="file" id="receiptUpload" hidden accept=".pdf">
-                <a href="#" class="action-btn whatsapp-btn" onclick="document.getElementById('receiptUpload').click()">
-                    <i class="fab fa-whatsapp"></i>
-                    إرسال الإيصال عبر واتساب
-                </a>
+            <div class="guest-info">
+                <div class="info-item">
+                    <span class="info-label">اسم العميل:</span>
+                    <span class="info-value">احمد عبدالله الغامدي</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">الجوال:</span>
+                    <span class="info-value">0559552326</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">البريد الإلكتروني:</span>
+                    <span class="info-value">---</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">العنوان:</span>
+                    <span class="info-value">---</span>
+                </div>
             </div>
-        </section>
 
-        <!-- موقع الخريطة -->
-        <div class="text-center">
+            <!-- موقع الخريطة -->
             <a href="https://maps.app.goo.gl/puSBzC4wMaQpkctR7?g_st=com.google.maps.preview.copy" 
                class="action-btn map-btn" 
                target="_blank">
                <i class="fas fa-map-marked-alt"></i>
                موقعنا على الخريطة
             </a>
-        </div>
+        </section>
 
         <!-- تفاصيل الحجز -->
         <div class="details-grid">
             <div class="detail-card">
-                <h3><i class="fas fa-calendar-alt"></i> التواريخ</h3>
-                <p>تاريخ الوصول: 30 أبريل 2025 - الأربعاء</p>
-                <p>تاريخ المغادرة: 3 مايو 2025 - السبت</p>
-                <div class="highlight-red">مدة الإقامة: 3 ليالي</div>
+                <h3><i class="fas fa-calendar-alt"></i> تفاصيل الحجز</h3>
+                <p>رقم العقد: 00212</p>
+                <p>الرقم الضريبي: 310853964500003</p>
+                <p>نوع الإيجار: يومي</p>
+                <p>الشقة: 505 غرفتين وصاله 2حمام</p>
+                <p>الإيجار اليومي: 345 ريال</p>
+                <p>عدد الأيام: 4</p>
             </div>
 
             <div class="detail-card">
-                <h3><i class="fas fa-bed"></i> نوع الغرفة</h3>
-                <p>غرفتين صالة حمامات</p>
-                <p>السعر اليومي: <span class="highlight-red">433 ريال</span></p>
+                <h3><i class="fas fa-calendar-check"></i> التواريخ</h3>
+                <p>بداية العقد: 01/05/2025 (الخميس)</p>
+                <p>الموافق: 03/11/1446</p>
+                <p>نهاية العقد: 05/05/2025 (الإثنين)</p>
+                <p>الموافق: 07/11/1446</p>
             </div>
         </div>
 
@@ -308,60 +306,34 @@
         <div class="price-timeline">
             <h3><i class="fas fa-receipt"></i> التفاصيل المالية</h3>
             <div class="timeline-item">
-                <span>سعر الغرفة الأساسي (3 ليالي)</span>
-                <span>1,299.00 ريال</span>
+                <span>سعر الغرفة اليومي (قبل الضريبة)</span>
+                <span>345 ريال</span>
+            </div>
+            <div class="timeline-item">
+                <span>التكلفة الكلية للإيجار (4 ليالي)</span>
+                <span>1380 ريال</span>
             </div>
             <div class="timeline-item">
                 <span>ضريبة القيمة المضافة (15%)</span>
-                <span>+194.85 ريال</span>
+                <span>207 ريال</span>
             </div>
             <div class="timeline-item">
-                <span>رسوم المرافق (2.5%)</span>
-                <span>+32.48 ريال</span>
+                <span>رسوم اشغال مرافق الإيواء (2.5%)</span>
+                <span>34.5 ريال</span>
             </div>
             <div class="timeline-item" style="border-bottom: none;">
-                <span>الإجمالي النهائي</span>
-                <span class="total-price">1,526.33 ريال</span>
+                <span>التكلفة النهائية</span>
+                <span class="total-price">1621.5 ريال</span>
             </div>
-        </div>
-
-        <!-- شروط الدفع -->
-        <div class="conditions-card">
-            <h3><i class="fas fa-exclamation-circle"></i> شروط الدفع</h3>
-            
-            <div class="condition-badge">
-                <i class="fas fa-clock"></i>
-                <span>الدفعة المقدمة لتأكيد الحجز</span>
+            <div class="timeline-item" style="border-top: 1px dashed #eee; margin-top: 1rem;">
+                <span>دفع مقدم 25% من إجمالي الحجز</span>
+                <span style="color: var(--success-color); font-weight: 600;">405.38 ريال</span>
             </div>
-            <p>دفعة مقدمة 25%: <span class="highlight-red">381.58 ريال</span></p>
-
-            <div class="important-note">
-                <i class="fas fa-info-circle"></i>
-                ملاحظة: يجب دفع 25% من قيمة الحجز لتأكيد الحجز
+            <div class="timeline-item" style="border-bottom: none;">
+                <span>المتبقي</span>
+                <span style="color: var(--warning-color); font-weight: 600;">1216.12 ريال</span>
             </div>
         </div>
     </div>
-
-    <div class="toast" id="toast">تم نسخ رقم الحساب بنجاح!</div>
-
-    <script>
-        function copyAccountNumber() {
-            const text = 'SA3230100949000006534485';
-            navigator.clipboard.writeText(text);
-            
-            const toast = document.getElementById('toast');
-            toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
-        }
-
-        document.getElementById('receiptUpload').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                window.open(`https://wa.me/966552978698?text=إليك إيصال الدفع للحجز`, '_blank');
-            }
-        });
-    </script>
 </body>
 </html>
